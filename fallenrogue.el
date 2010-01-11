@@ -2,13 +2,26 @@
 
 ;; Manually set PATH for use by eshell, rspec-mode, etc.
 (let ((path))
-  (setq path (concat "/opt/ruby-enterprise/bin:"
-                     "~/bin:"
-                     "~/src/homebrew/bin:"
+(setq path (concat "/Users/fallenrogue/.rvm/ruby-1.8.7-p248/bin:"
+                     "/Users/fallenrogue/.rvm/gems/ruby-1.8.7-p248/bin:"
+                     "/Users/fallenrogue/.rvm/bin:"
                      "/usr/local/bin:"
+                     "/usr/local/git/bin:"
+                     "/opt/local/lib/mysql5/bin:"
+                     "/opt/local/lib/postgresql83/bin:"
+                     "/opt/local/bin:"
+                     "/opt/local/sbin:"
+                     "/Users/fallenrogue/Library/bin:"
+                     "/usr/local/lib/jruby-1.3.1/bin:"
                      "/usr/bin:"
-                     "/bin"))
-  (setenv "PATH" path))
+                     "/bin:"
+                     "/usr/sbin:"
+                     "/sbin:"
+                     "/usr/local/bin:"
+                     "/usr/local/git/bin:"
+                     "/usr/X11/bin:"
+                     "/Library/EnterpriseDB/postgres/8.3/bin:"))
+(setenv "PATH" path))
 
 (add-to-list 'load-path (concat dotfiles-dir "/vendor"))
 
