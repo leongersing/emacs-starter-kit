@@ -6,3 +6,7 @@ places
 
 /#topfunky.el#
 /url/cookies
+.emacs.d/
+auto-save-list/
+
+.emacs.d
