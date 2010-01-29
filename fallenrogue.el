@@ -52,6 +52,7 @@
 
 (setq default-tab-width 2)
 (setq tab-width 2)
+(setq ido-enable-flex-matching t)
 
 ;; Open current file in TextMate.
 (defun textmate-open-buffer ()
@@ -558,6 +559,13 @@
 
 ;;; theme-end
 
-;; Activate theme
-(color-theme-helvetica)
-;; (color-theme-emacs-21)
+;; Activate theme... I like blue and not the starter kit theme. 
+(color-theme-deep-blue)
+;; I'm also blind... so this makes the text 16pt.
+(set-face-attribute 'default nil :height 160)
+;; provides 'clear' command
+
+(defun eshell/clear ()
+  (interactive)
+  (let ((inhibit-read-only t))
+    (erase-buffer)))
